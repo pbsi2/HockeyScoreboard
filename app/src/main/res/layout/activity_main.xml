@@ -309,10 +309,9 @@
             <ProgressBar
                 android:id="@+id/progressBar"
                 style="@android:style/Widget.ProgressBar.Horizontal"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_weight="1"
                 android:indeterminate="false"
                 android:max="40"
                 android:progressTint="@color/colorPrimaryDark"
@@ -322,11 +321,10 @@
             <ProgressBar
                 android:id="@+id/progressBar2"
                 style="@android:style/Widget.ProgressBar.Horizontal"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_weight="1"
                 android:indeterminate="false"
                 android:max="40"
                 android:progressTint="@color/colorPrimaryDark"
@@ -337,11 +335,10 @@
             <ProgressBar
                 android:id="@+id/progressBar3"
                 style="@android:style/Widget.ProgressBar.Horizontal"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_weight="1"
                 android:indeterminate="false"
                 android:max="40"
                 android:progressTint="@color/colorPrimaryDark"
@@ -351,25 +348,13 @@
 
             <Chronometer
                 android:id="@+id/time_toplay_textview"
-                android:layout_width="148dp"
-                android:layout_height="59dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:countDown="true"
-                android:ems="10"
-                android:paddingStart="8dp"
-                android:shadowColor="@android:color/holo_orange_light"
-                android:shadowDx="-1.5"
-                android:shadowDy="-2"
-                android:shadowRadius="2"
-                android:textAlignment="viewEnd"
+                android:paddingRight="16dp"
+                android:textAlignment="textEnd"
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="36sp"
-                android:textStyle="bold"
-                android:typeface="normal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:textSize="24sp" />
         </LinearLayout>
 
         <RelativeLayout
@@ -452,20 +437,26 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="Stop/Start"
+                    android:onClick="toggleChrono"
+                    android:paddingRight="16dp"
+                    android:text="Start"
                     android:textAlignment="center"
                     android:textAllCaps="false"
+                    android:textOff="Start"
+                    android:textOn="Stop"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:thumbTint="@color/colorAccent"
+                    android:trackTint="@android:color/holo_orange_light" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/control_scores_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_below="@+id/control_action_layout"
-                android:layout_weight="1"
+
                 android:orientation="vertical">
 
                 <TextView
